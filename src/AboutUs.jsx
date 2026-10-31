@@ -1,0 +1,1 @@
+export default function AboutUs(){return <aside className="about"><p className="eyebrow">Our promise</p><h2>Plants with purpose.</h2><p>Paradise Nursery makes plant care simple with resilient varieties, thoughtful guidance, and doorstep delivery.</p></aside>}
