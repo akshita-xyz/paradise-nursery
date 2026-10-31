@@ -16,10 +16,11 @@ export default function App() {
   return <div className="app">
     <header className="navbar"><button className="brand" onClick={() => setPage("home")}><Leaf size={22}/> Paradise Nursery</button><nav><button onClick={() => setPage("home")}>Home</button><button onClick={() => setPage("plants")}>Plants</button><button className="cart-link" onClick={() => setPage("cart")}><ShoppingCart size={19}/> Cart <span>{count}</span></button></nav></header>
     {page === "home" && <main className="hero"><div><p className="eyebrow">Bring nature home</p><h1>Welcome to Paradise Nursery</h1><h2>Grow a happier <em>home.</em></h2><p>Beautiful, healthy houseplants selected to make every room feel alive.</p><button className="primary" onClick={() => setPage("plants")}>Get Started <ArrowLeft size={18} className="flip"/></button></div><AboutUs/></main>}
-    {page === "plants" && <ProductList plants={plants} cart={cart} addToCart={addToCart} />}
+    {page === "plants" && <ProductList plants={plants} cart={cart} addToCart={addToCart} goHome={() => setPage("home")} goPlants={() => setPage("plants")} goCart={() => setPage("cart")} />}
     {page === "cart" && <CartItem cart={cart} updateQuantity={updateQuantity} removeItem={removeItem} continueShopping={() => setPage("plants")} />}
   </div>
 }
+
 
 
 
